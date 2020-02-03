@@ -18,7 +18,7 @@ def facts():
         yield int(id), name, age
 
 @converted_types
-def nameStartsWithB(name: str, letter: str):
+def nameStartsWithLetter(name: str, letter: str):
     return name if name[0].lower() == letter.lower() else false()
 
 #end.
@@ -28,6 +28,6 @@ id(ID) :- data((ID, _, _)).
 name(Name) :- data((_, Name, _)).
 age(Age) :- data((_, _, Age)).
 
-nameStartsWithB(@nameStartsWithB(Name, "B")) :- name(Name).
+nameStartsWithB(@nameStartsWithLetter(Name, "B")) :- name(Name).
 
 #show nameStartsWithB/1.

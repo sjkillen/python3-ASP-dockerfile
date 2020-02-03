@@ -3,7 +3,7 @@ Example usage sample.lp
 
 ```
 docker build -t clyngor .
-docker run -it --name clyngor --net=host -v$PWD:/src clyngor
+docker run -it --name clyngor --net=host -v"$PWD":/src clyngor
 cd src
 clingo sample.lp
 ```
